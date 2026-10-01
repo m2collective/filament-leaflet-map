@@ -1,0 +1,29 @@
+{
+  "private": true,
+  "name": "filament-leaflet-map",
+  "description": "",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/filament-leaflet-map.umd.cjs",
+  "module": "./dist/filament-leaflet-map.js",
+  "exports": {
+    ".": {
+      "import": "./dist/filament-leaflet-map.js",
+      "require": "./dist/filament-leaflet-map.umd.cjs"
+    },
+    "./style.css": "./dist/filament-leaflet-map.css"
+  },
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite"
+  },
+  "dependencies": {
+    "leaflet": "^1.9.4"
+  },
+  "devDependencies": {
+    "sass-embedded": "^1.105.1",
+    "vite": "^8.0.0"
+  }
+}
