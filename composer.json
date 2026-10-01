@@ -1,0 +1,38 @@
+{
+  "$schema": "https://getcomposer.org/schema.json",
+  "name": "m2collective/filament-leaflet-map",
+  "keywords": [
+    "filament",
+    "map"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/m2collective/filament-map",
+  "authors": [
+    {
+      "name": "bu0nq",
+      "email": "hello@bu0nq.ru",
+      "homepage": "https://bu0nq.ru",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^8.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "M2Collective\\FilamentLeafletMap\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "M2Collective\\FilamentLeafletMap\\FilamentLeafletMapServiceProvider"
+      ]
+    }
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
