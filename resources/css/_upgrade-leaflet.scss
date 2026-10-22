@@ -1,0 +1,36 @@
+.leaflet-control-zoom {
+    border: none !important;
+}
+
+.leaflet-control-zoom-in,
+.leaflet-control-zoom-out {
+    display: grid !important;
+    align-content: center !important;
+    justify-content: center !important;
+    height: 36px !important;
+    width: 36px !important;
+    background-color: hsl(221, 97%, 54%) !important;
+    border: none !important;
+    color: hsl(0, 0%, 100%) !important;
+
+    > span {
+        display: grid !important;
+        margin-top: -2px !important;
+        line-height: 1px !important;
+        font-size: 16px !important;
+        font-weight: 600 !important;
+    }
+
+    &:hover {
+        background-color: hsl(217, 100%, 60%) !important;
+    }
+}
+
+.leaflet-control-zoom-in {
+    border-radius: 4px 4px 0 0 !important;
+}
+
+.leaflet-control-zoom-out {
+    border-radius: 0 0 4px 4px !important;
+    border-top: 1px solid hsla(0, 0%, 0%, 0.25) !important;
+}
