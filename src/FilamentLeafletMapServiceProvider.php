@@ -3,7 +3,6 @@ declare(strict_types=1);
 
 namespace M2Collective\FilamentLeafletMap;
 
-use Filament\Support\Assets\Asset;
 use Filament\Support\Assets\Css;
 use Filament\Support\Assets\Js;
 use Filament\Support\Facades\FilamentAsset;
@@ -17,7 +16,8 @@ final class FilamentLeafletMapServiceProvider extends ServiceProvider
     public function register(): void
     {
         $this->mergeConfigFrom(
-            __DIR__ . '/../config/filament-leaflet-map.php', $this->getPackageName()
+            path: __DIR__ . '/../config/filament-leaflet-map.php',
+            key: 'filament-leaflet-map'
         );
     }
 
@@ -27,30 +27,13 @@ final class FilamentLeafletMapServiceProvider extends ServiceProvider
     public function boot(): void
     {
         $this->loadViewsFrom(
-            __DIR__ . '/../resources/views', $this->getPackageName()
+            path: __DIR__ . '/../resources/views',
+            namespace: 'filament-leaflet-map'
         );
 
-        FilamentAsset::register(
-            $this->getPackageAssets(), $this->getPackageName()
-        );
-    }
-
-    /**
-     * @return string
-     */
-    protected function getPackageName(): string
-    {
-        return 'filament-leaflet-map';
-    }
-
-    /**
-     * @return array<Asset>
-     */
-    public function getPackageAssets(): array
-    {
-        return [
-            Css::make($this->getPackageName(), __DIR__.'/../dist/filament-leaflet-map.css'),
-            Js::make($this->getPackageName(), __DIR__.'/../dist/filament-leaflet-map.js'),
-        ];
+        FilamentAsset::register(assets: [
+            Css::make(id: 'filament-leaflet-map', path: __DIR__.'/../dist/filament-leaflet-map.css'),
+            Js::make(id: 'filament-leaflet-map', path: __DIR__.'/../dist/filament-leaflet-map.js'),
+        ], package: 'filament-leaflet-map');
     }
 }
