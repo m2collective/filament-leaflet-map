@@ -49,67 +49,67 @@ final class Map extends Field
     {
         $this->config['statePath'] = $this->getStatePath();
 
-        if(!empty($this->tileLayer)) {
+        if($this->tileLayer !== null) {
             $this->config['tileLayer'] = $this->tileLayer;
         } else {
             $this->config['tileLayer'] = config('filament-leaflet-map.tileLayer');
         }
 
-        if(!empty($this->tileSize)) {
+        if($this->tileSize !== null) {
             $this->config['tileSize'] = $this->tileSize;
         } else {
             $this->config['tileSize'] = config('filament-leaflet-map.tileSize');
         }
 
-        if(!empty($this->latitude)) {
+        if($this->latitude !== null) {
             $this->config['latitude'] = $this->latitude;
         } else {
             $this->config['latitude'] = config('filament-leaflet-map.latitude');
         }
 
-        if(!empty($this->longitude)) {
+        if($this->longitude !== null) {
             $this->config['longitude'] = $this->longitude;
         } else {
             $this->config['longitude'] = config('filament-leaflet-map.longitude');
         }
 
-        if(!empty($this->zoom)) {
+        if($this->zoom !== null) {
             $this->config['zoom'] = $this->zoom;
         } else {
             $this->config['zoom'] = config('filament-leaflet-map.zoom');
         }
 
-        if(!empty($this->zoomOffset)) {
+        if($this->zoomOffset !== null) {
             $this->config['zoomOffset'] = $this->zoomOffset;
         } else {
             $this->config['zoomOffset'] = config('filament-leaflet-map.zoomOffset');
         }
 
-        if(!empty($this->maxZoom)) {
+        if($this->maxZoom !== null) {
             $this->config['maxZoom'] = $this->maxZoom;
         } else {
             $this->config['maxZoom'] = config('filament-leaflet-map.maxZoom');
         }
 
-        if(!empty($this->minZoom)) {
+        if($this->minZoom !== null) {
             $this->config['minZoom'] = $this->minZoom;
         } else {
             $this->config['minZoom'] = config('filament-leaflet-map.minZoom');
         }
 
-        if(!empty($this->detectRetina)) {
+        if($this->detectRetina !== null) {
             $this->config['detectRetina'] = $this->detectRetina;
         } else {
             $this->config['detectRetina'] = config('filament-leaflet-map.detectRetina');
         }
 
-        if(!empty($this->zoomControl)) {
+        if($this->zoomControl !== null) {
             $this->config['zoomControl'] = $this->zoomControl;
         } else {
             $this->config['zoomControl'] = config('filament-leaflet-map.zoomControl');
         }
 
-        if(!empty($this->scrollWheelZoom)) {
+        if($this->scrollWheelZoom !== null) {
             $this->config['scrollWheelZoom'] = $this->scrollWheelZoom;
         } else {
             $this->config['scrollWheelZoom'] = config('filament-leaflet-map.scrollWheelZoom');
