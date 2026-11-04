@@ -16,8 +16,7 @@
         }
     ],
     "require": {
-        "php": "^8.4",
-        "m2collective/filament-sdk": "^0.1"
+        "php": "^8.4"
     },
     "autoload": {
         "psr-4": {
